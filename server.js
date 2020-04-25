@@ -2,9 +2,13 @@
 projectData = {};
 
 // Require Express to run server and routes
-
+const express= require('express');
 // Start up an instance of app
+const app= express();
 
+//including cors and connecting it to express app instanceconst 
+const cors= require('cors');
+app.use(cors());
 /* Middleware*/
 //Here we are configuring express to use body-parser as middle-ware.
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -17,3 +21,9 @@ app.use(express.static('website'));
 
 
 // Setup Server
+const port= 8000;
+const server= app.listen(port, listening);
+
+function listening(){
+    console.log(`running on localhost: ${port}`);
+}
