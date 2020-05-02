@@ -1,94 +1,97 @@
 body{
     
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+ font-family: 'Archivo', sans-serif;
  }
-/* html{ background: url('/assets/images/adriel-kloppenburg-04zTvMalMfU-unsplash.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; 
+ 
+ html{ background: url('/assets/images/maddison-mcmurrin-GDumtPpJsT4-unsplash.jpg') no-repeat center center fixed;
+    /* Image from Maddison Mcmurrin on unsplash  */
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover; 
 
-} */
-
-#app{
-    border: 2px solid black;
-    margin: 0 auto;
-    width: 50%;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    
+} 
+#app{ 
+    width: 80%;
+    height: auto;
+    margin: 4em auto;
+    font-size: 20px; 
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(242, 246, 248, 0.8);
+    border-radius: 25px; 
+    text-align: center;   
    }
-   .entry{
-    background: rgba(59, 74, 107, .4);
-}
+    .holder{
+        margin: 0.5em;
+        padding: 0.5em;
+    }
+   .headline{
+       font-size: 1.7em;
+       text-align: center;
+       padding: 1em 1.5em 1em 1.5em;
+       font-weight: bolder;
+       color: rgb(10, 136, 219);
+       font-family: 'Raleway', sans-serif;
+   }
+   .zip{
+       display: flex;
+       flex-direction: column;
+       text-align: center;    
+   }
+   #zip{
+       text-align: center;
+       width: 30%;
+       margin: 0.7em auto;
+       padding: 0.6em;
+       border-radius: 10px;
+    border: 2px inset rgb(254, 255, 255);
+    background-color: rgb(254, 255, 255);
+    font-size: 16px;
+   }
+   .feel{
+    display: flex;
+    flex-direction: column; 
+    text-align: center;  
+   } 
+   textarea{
+    width: 350px;
+    height: auto;
+    margin: 0.7em auto;
+    text-align: center;
+    padding: 1em;
+    border-radius: 7px;
+    background-color:  rgb(254, 255, 255);
+    border: 2px inset;
+    font-size: 16px;
+    }
+    #generate{
+    width: 6em;
+    color: rgb(254, 255, 255);
+    background-color: rgb(48, 167, 247);
+    padding: 0.5em;
+    text-align: center;
+    align-self: center;
+    margin-top: 1em;
+    border-radius: 10px;
+    border: 2px outset;
+    font-size: 16px;
+    }
+    .entry{
+    text-align: center;   
+     }
+     #entryHolder{
+    width: 350px;
+    height: auto;
+    background-color: rgb(254, 255, 255);
+    margin: 0.7em auto;
+    padding: 1em;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px inset rgb(254, 255, 255);
+    }
 
-/*
-.holder{
 
-}
-
-
-
-#entryHolder{
-
-}
-
-#date{
-
-}
-
-#temp{
-
-}
-
-#content{
-
-}
-
-.headline {
-
-}
-.title{
-
-}
-        */
-/*  Basic Styling To Override Default For Basic HTML Elements */
-label{
-    display:block;
-    font-size: 27px;
-}
-
-input{
-    display:block;
-    height: 60px;
-    width: 320px;
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
-}
-
-button{
-    width: 400px;
-    height: 100px;
-    background: #3b4a6b;
-    color: #f0d43a;
-    font-size: 26px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
-    box-shadow: 2px 4px 5px #444;
-}
-h1{
-    font-size: 36px;
-}
-
-textarea{
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-}
 /* Reset style for HTML element on active to have no border*/
 input:focus,
 select:focus,
@@ -98,19 +101,56 @@ button:focus {
 }
 /* Style for Placeholder Text*/
 ::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
+    color: rgb(10, 136, 219);
 
 } 
   
 :-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
+    color:  rgb(10, 136, 219);
+    
 
 } 
   
 ::-ms-input-placeholder { /* Microsoft Edge */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
+    color:   rgb(10, 136, 219);
+    
 
 } 
+
+/*  MEDIA QUERIES */
+
+@media screen and (min-width:480px){
+#app{
+    width: 70%;   
+}
+
+#entryHolder,
+textarea {
+    width: 400px;
+}
+}
+@media screen and (min-width:880px){
+
+ #app{
+     width: 60%;
+    }
+}
+@media screen and (min-width:920px){
+    #app{
+     width: 55%;
+    }
+    #generate{
+        font-size: 20px;
+        width: 8em;
+    }
+}
+@media screen and (min-width:1020px){
+    #app{
+        width: 50%;
+    }
+}
+@media screen and (min-width:1130px){
+    #app{
+        width: 40%;
+    }
+}
