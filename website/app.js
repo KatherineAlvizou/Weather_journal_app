@@ -19,6 +19,12 @@ function performAction(e){
 };
 
 
+const addData= async()=>{
+  const weather= await getApi();
+  const feelings= document.getElementById('feelings').value;
+  postData('/add', {temp:weather, date: newDate, feelings:feelings});
+
+}
 //GET web API 
 const getApi= async()=>{
     const zip= document.getElementById('zip').value;
@@ -32,14 +38,6 @@ const getApi= async()=>{
      console.log('error', error);
  }
 }
-
-const addData= async()=>{
-  const weather= await getApi();
-  const feelings= document.getElementById('feelings').value;
-  postData('/add', {temp:weather, date: newDate, feelings:feelings});
-
-}
-
 
  //update the UI
 const updateUI= async()=>{
